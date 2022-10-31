@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/css.css">
+
+    <title>{% block title %}{%endblock%}</title>
+</head>
+<body>
+    
+    <header class="header">
+
+        <nav class="nav">
+            <a href="login" class="enlace">Login</a>
+            <a href="#" class="enlace">Logout</a>
+            <a href="sign-up" class="enlace">Sign-up</a>
+        </nav>
+
+    </header>
+
+    {%with messages = get_flashed_messages(with_categories=true)%}
+    {%if messages%}
+        {%for category, message in messages%}
+        
+        {%if category == "error"%}
+        <div class="alert-error" role="alert" id="alert">
+            <h4 class="alert-error_alert">{{message}}</h4>
+            <button type="button" class="alert-error_close" id="alert_close" data-dismiss="alert">
+                <span class="x">&times;</span>
+            </button>
+        </div>
+        {%else%}
+        <div class="alert-success" role="alert" id="alert">
+            <h4 class="alert-success_alert">{{message}}</h4>
+            <button type="button" class="alert-success_close" id="alert_close" data-dismiss="alert">
+                <span class="x">&times;</span>
+            </button>
+        </div>
+        {%endif%}    
+        {%endfor%}
+    {%endif%}
+    {%endwith%}
+
+    <main class="main-content">
+        {%block content%}{%endblock%}
+    </main>
+
+    <script src="../static/js/main.js"></script>
+
+</body>
+</html>

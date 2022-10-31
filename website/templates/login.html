@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+{% block title %}sign_up{%endblock%}
+{%block content%}
+<form method="POST" class="form">
+
+    <h3 class="form_title">Login</h3>
+
+    <div class="form_inputs">
+        <div class="form_inputs_both">
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="name" placeholder="Enter your email">
+        </div>
+        <div class="form_inputs_both">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter password">  
+        </div>
+    </div>
+
+    <button type="submit" class="form_submit">Submit</button> 
+
+</form>
+{%endblock%}

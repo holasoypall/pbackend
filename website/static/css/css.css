@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600&display=swap');
+:root{
+	--Fuente: "Roboto Mono", monospace;
+}
+
+html{
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*,*:before,*:after{
+	box-sizing: inherit;
+}
+
+body{
+	font-size: 16px;
+	font-family: var(--Fuente);
+}
+
+/*HEADER*/
+.header{
+
+	padding: 2rem;
+	background-color: rgb(72, 72, 72);
+
+}
+
+.nav{
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+}
+
+.enlace{
+
+	margin-right: 2rem;
+	text-decoration: none;
+	color: grey;
+	font-size: 2rem;
+
+}
+.enlace:hover{
+
+	color: rgb(177, 177, 177);
+	position: relative;
+	top: -4px;
+
+}
+.enlace:last-of-type{
+
+	margin-right: 0;
+
+}
+
+/*SIGN_UP*/
+.form{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+.form_title{
+
+	text-transform: uppercase;
+
+}
+.form_inputs_both, .form_submit{
+
+	margin-top: 2rem;
+
+}
+.form_inputs_both:first-of-type{
+
+	margin-top: 0;
+
+}
+.form_inputs_both{
+
+	display: flex;
+	justify-content: space-between;
+
+}
+.form_inputs_both input {
+	
+	border-radius: 50px;
+	
+	padding: 0.5rem;
+	text-align: center;
+	font-size: 1rem;
+	margin-left: 4rem;
+
+}
+.form_submit{
+
+	cursor: pointer;
+	background-color: rgb(53, 53, 53);
+	border: none;
+	border-radius: 50px;
+	padding: 1rem 2rem;
+	color: white;
+	text-align: center;
+
+}
+
+.form_submit:hover{
+
+	position: relative;
+	top: -1px;
+	background-color: rgb(95, 95, 95);
+
+}
+
+/*ALERTA*/
+.alert-error, .alert-success{
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+
+}
+.alert-error{
+
+	background-color: rgb(242, 119, 119);
+	border-bottom: red 1px solid;
+
+}
+.alert-success{
+
+	background-color: rgb(83, 173, 83);
+	border-bottom: green 1px solid;	
+
+}
+.alert-error_alert, .alert-success{
+
+	color: white;
+
+}
+.alert-error_close, .alert-success_close{
+
+	cursor: pointer;
+	background-color: white;
+	border: none;
+	border-radius: 25%;	
+	font-size: 2.5rem;
+	
+}
+.alert-error_close, .alert-success_close:hover{
+
+	position: relative;
+	top: 1px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
